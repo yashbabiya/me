@@ -1,5 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@400;500;700&display=swap");
+.header {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.header .top {
+  width: 100%;
+  margin-bottom: 1em;
+}
+.header .top h1 {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  width: 100%;
+}
+.header .top .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.header input {
+  background: none;
+  border: 2px solid black;
+  padding: 1em;
+  border-radius: 2em;
+}
+.header .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header .bottom .links {
+  display: flex;
+  font-size: 0.8em;
+  gap: 2em;
+  margin-right: 0.8em;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+#sml {
+  font-size: 0.7em;
+}
+
+body {
+  background-color: rgb(255, 238, 238);
+}
+
+pre {
+  max-width: 50ch;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: 1s linear;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.page {
+  padding: 0 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+.page h1 {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.header {
+  font-size: 1.5rem;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  flex-direction: column;
+  padding: 1em;
+}
+.card .top {
+  display: none;
+  transition: 1s display ease;
+  justify-content: center;
+  align-items: center;
+}
+.card .top h2 {
+  max-width: 20ch;
+}
+.card .top:hover ~ .card-content {
+  transform: translateY(0%);
+}
+.card .card-content {
+  width: 100%;
+  max-width: 30ch;
+  z-index: -1;
+  transition: 0.3s linear;
+  padding: 1.5em;
+}
+.card .card-content .auther {
+  width: 100%;
+  text-align: left;
+}
+.card .img {
+  width: 100%;
+  overflow: hidden;
+}
+.card .img img {
+  width: 100%;
+  transition: 0.3s ease;
+  transform-origin: center;
+}
+.card .img img:hover {
+  width: 103%;
+  filter: grayscale(0);
+}
+.card:hover ~ .img {
+  width: 700px !important;
+}
+
+@media screen and (max-width: 1035px) {
+  .card .top {
+    display: block;
+  }
+
+  .header .search {
+    display: flex !important;
+  }
+  .header .bottom .links {
+    display: none;
+  }
 }/*# sourceMappingURL=index.css.map */

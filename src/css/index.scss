@@ -1,5 +1,137 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+// @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&display=swap');
+// @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Playfair+Display:wght@400;500;700&display=swap');
+@import "./_header.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: 'Cinzel', serif;
+  font-family: "Playfair Display", serif;
+}
+#sml{
+    font-size: .7em;
+}
+body {
+  background-color: rgb(255, 238, 238);
+}
+pre{
+    max-width: 50ch;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: 1s linear;
+    &:hover{
+        text-decoration: underline;
+
+    }
+}
+.page {
+  padding: 0 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  h1{
+      width: 100%;
+      font-size: 2rem;
+      text-align: center;
+      text-decoration: underline;
+      text-transform: capitalize;
+  }
+}
+.header {
+  font-size: 1.5rem;
+}
+.card {
+  display: flex;
+  justify-content: center;
+//   border: 1px solid black;    
+//   -webkit-box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+//   -moz-box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+//   box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+  align-items: center;
+  max-width: 500px;
+//   margin: 2em;
+  flex-direction: column;
+  padding: 1em;
+
+  .top {
+    display: none;
+    transition: 1s display ease;
+    justify-content: center;
+    align-items: center;
+    h2 {
+        max-width: 20ch;
+    }
+    &:hover{
+        ~.card-content{
+            transform: translateY(0%);
+        }
+    }
+  }
+  .card-content {
+    width: 100%;
+    max-width: 30ch;
+    // transform: translateX(-100%);
+    z-index: -1;
+    // background-color: white;
+    transition: .3s linear;
+    padding: 1.5em;
+    .auther{
+        
+        width: 100%;
+        text-align: left;
+    }
+  }
+  .img {
+    // max-width: 100px;
+
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+    //   filter: grayscale(90%);
+      transition: 0.3s ease;
+      transform-origin: center;
+      &:hover {
+        
+        width: 103%;
+          filter: grayscale(0);
+        
+      }
+    }
+    
+  }
+
+  &:hover{
+      ~.img{
+        width: 700px !important;
+      }
+  }
+}
+
+@media screen and(max-width : 1035px) {
+   .card{
+       .top{
+           display: block;
+       }
+   }
+   .header{
+    .search{
+        display: flex !important;
+    }
+    .bottom{
+
+    
+    .links{
+        display: none;
+        
+    }
+}
+   }
+   
 }
