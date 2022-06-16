@@ -1,0 +1,109 @@
+.projects {
+  padding: 5em 0;
+//   background-color: white;
+//   position: sticky;
+//   top: 0;
+
+  
+  z-index: 10;
+  .all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .pointer{
+    background-color: red;
+    width: 100px !important;
+    height: 100px;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    border-radius: 50%;
+    opacity:.5;
+  }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .mid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    p {
+      margin: 1em 0;
+      font-size: 3rem;
+      line-height: 3rem;
+      font-weight: bold;
+      text-align: right;
+      max-width: 30ch;
+    }
+  }
+  .bottom {
+    // position: relative;
+    .rev{
+      flex-direction: row-reverse;
+    }
+    .card {
+      
+      .left{
+        position: sticky;
+        top: 2em;
+        // background-color: aqua;
+        height: max-content;
+        width: 100%;
+        .pill-case{
+          display: flex;
+          gap: 2em;
+          width: 100%;
+          flex-wrap: wrap;
+          .pill{
+            padding: .5em 3em;
+            background-color: red;
+            border-radius: 2em;
+          }
+        }
+      }
+      background-color: white;
+      h1{
+        font-size: 4rem;
+      }
+    //   min-height: 100vh;
+      display: flex;
+      padding: 4em 0;
+    //   flex-wrap: wrap;
+      div{
+        width: 50% !important;
+        // min-width: 200px;
+      }
+      .right{
+        // border: 2px solid black;
+        display: flex;
+        width: 100%;
+
+        img{
+          width: 80% !important;
+          // border: 1px double ;
+        }
+      }
+      .btns{
+        display: flex;
+        gap: 1em;
+        margin: 1em 0;
+        a{
+            text-decoration: none;
+            color: black;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+      }
+
+    }
+  }
+}
+.mini{
+  display: none;
+}

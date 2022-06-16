@@ -1,19 +1,24 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import Category from "./pages/Category";
 import Home from "./pages/Home";
-import SearchResults from "./pages/SearchResults";
-
+import {motion } from 'framer-motion'
 
 function App() {
   return (
     <div className="App">
+      <div className="app">
+      <motion.div className="landing"
+
+      transition={{delay:1,duration:10,type:"spring"}}
+      animate={{y:-10000}}
+      >Good to see you !!</motion.div>
       <Header/>
+      
       <Routes>
         <Route exact path='/' element={<Home />}></Route>
-        <Route exact path='/search' element={<SearchResults />}></Route>
-        <Route exact path='/category' element={<Category />}></Route>
+        
       </Routes>
+      </div>
     </div>
   );
 }

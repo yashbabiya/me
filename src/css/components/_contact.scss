@@ -1,0 +1,35 @@
+.contact {
+  padding-top: 5em;
+  scroll-snap-align: start;
+  background-color: black;
+  color: white;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .bottom {
+    margin: 3em 0;
+    span {
+      font-size: 2rem;
+    }
+    h1 {
+      font-size: 2.4rem;
+    }
+    .social {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1em;
+    }
+    a {
+      color: white;
+    }
+    p {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
