@@ -11,7 +11,7 @@ function App() {
 
       transition={{delay:1,duration:10,type:"spring"}}
       animate={{y:-10000}}
-      >Good to see you !!</motion.div>
+      >{`Hey :)`}</motion.div>
       <Header/>
       
       <Routes>
